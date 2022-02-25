@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReFresh</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    {{#if result_page}}
+    {{else}}
+        <div class="progress_bar_bg">
+            <div class="progress_bar">
+                <div class="progress">
+                
+                </div>
+            </div>
+        </div>
+    {{/if}}
+    
+    
+    <main class="test_page" {{#if result_page}}{{else}}style="margin-top: calc(5% - 41px);"{{/if}} >
+        <div class="logo">
+            <img src="/static/img/logo.png" alt="">
+        </div>
+        <div class="test_list" {{#if admin_page}}style="background: none;"{{/if}}>
+            {{{body}}}
+        </div>
+    </main>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
