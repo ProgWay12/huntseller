@@ -165,7 +165,7 @@ input {
 input:disabled {
     background-color: #fff;
     color: black;
-    -webkit-text-fill-color: #fff;
+    -webkit-text-fill-color: #000;
     opacity: 1;
 }
 
