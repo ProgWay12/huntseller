@@ -162,6 +162,11 @@ input {
     font-size: 27px;
 }
 
+.input:disabled {
+    background-color: #fff;
+    color: black;
+}
+
 input::placeholder {
     color: black;
     text-align: center;
