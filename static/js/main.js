@@ -3,7 +3,7 @@ function check_radio(item) {
 }
 
 window.onload = () => {
-    if (typeof(document.querySelector(".logout")) != "undefined") {
+    if (typeof(document.querySelector(".logout")) != "undefined" && window.screen.width > 800) {
         var parent_height = document.querySelector(".logout").parentNode.clientHeight
         var btn_h = document.querySelector(".logout").clientHeight
 

@@ -87,6 +87,10 @@ body {
     margin-bottom: 15px;
 }
 
+.progressbar_margin {
+    margin-top: calc(5% - 41px);
+}
+
 .logo img {
     width: 100%;
     vertical-align: bottom;
@@ -193,10 +197,13 @@ input[type='submit'] {
 }
 
 .test_header h3 {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
     font-family: "PlumbCondensed_bold";
-    font-size: 30px;
-    line-height: 80px;
+    font-size: 30px;    
+    padding-top: 22.5px;
+    padding-bottom: 22.5px;
+    line-height: 35px;
     color: black;
     text-align: center;
 }
@@ -249,7 +256,7 @@ input[type='submit'] {
 }
 
 .answers_block {
-    width: 60%;
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
@@ -537,6 +544,7 @@ input[type='submit'] {
     padding-left: 0;
     text-align: center;
     color: white;
+    margin-bottom: 0;
 }
 
 .test_header.admin_header h3 {
@@ -622,4 +630,290 @@ input[type='submit'] {
 .all_admins_table_row.employers_row .btns .each_btn {
     width: 100%;
     margin: 0;
+}
+
+@media screen and (max-width: 800px) {
+    .main_page {
+        min-width: auto;
+        width: 90%;
+        margin-top: calc(100vh / 7);
+    }
+
+    .login_page {
+        min-width: auto;
+        width: 90%;
+        margin-top: calc(100vh / 7);
+    }
+
+    .test_page {
+        min-width: auto;
+        width: 90%;
+        margin-top: calc(100px - 41px);
+    }
+
+    .employer_cabinet_page {
+        min-width: auto;
+        width: 90%;
+        margin-top: 100px;
+    }
+
+    .cabinet .row.search_row {
+        display: flex;
+    }
+
+    .cabinet .row.search_row .input_wrapper {
+        width: 89%;
+    }
+
+    .cabinet .row.search_row .btns {
+        width: 10%;
+        margin-left: 1%;
+        margin-top: 0;
+    }
+
+    .cabinet .row {
+        display: block;
+        margin-top: 30px;
+    }
+
+    .cabinet .row .input_wrapper {
+        width: 100%;
+    }
+
+    .cabinet .row .btns {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 15px;
+    }
+
+    .cabinet .row .btns .each_btn:nth-child(1) {
+        margin-right: 2%;
+    }
+
+    .cabinet .row .btns .each_btn {
+        width: 49%;
+    }
+
+    .logo_wrapper {
+        display: block;
+        margin-bottom: 50px;
+    }
+
+    .logo_wrapper .logo {
+        margin: 0 auto;
+    }
+
+    .logo_wrapper .logout {
+        margin: 0 auto;
+    }
+
+    .test_header.employer {
+        display: block;
+    }
+
+    .test_header.employer .back_btn {
+        width: 40%;
+        margin-left: 30%;
+    }
+
+    .test_header.employer h3 {
+        margin: 0 auto;
+        width: 90%;
+        text-align: center;
+        margin-bottom: 30px;
+        padding-left: 0;
+    }
+
+    .row.main.send_res {
+        display: block;
+    }
+
+    .row.main.send_res .input_wrapper {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .row.main.send_res .each_td.action {
+        width: 100%;
+    }
+
+    .result_table {
+        width: 90%;
+    }
+
+    .admin_form {
+        margin-top: 0;
+    }
+
+    .all_admins_table {
+        width: 80%;
+    }
+
+    .all_admins_table_row {
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    .all_admins_table_row .input_wrapper {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 15px;
+    }
+
+    .all_admins_table_row .btns {
+        width: 100%;
+    }
+
+    .all_admins_table_row a.each_btn {
+        margin-right: 0;
+    }
+
+    .test_header.employer.admin_header.all_admins .back_btn {
+        width: 40%;
+        margin-left: 30%;
+    }
+
+    .all_admins_table_row a.each_btn:first-child {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .logo {
+        width: 80%;
+    }
+
+    a {
+        font-size: 27px;
+    }
+
+    .main_page {
+        margin-top: calc(100vh / 6);
+    }
+
+    form {
+        width: 100%;
+    }
+
+    input {
+        font-size: 25px;
+    }
+
+    .under_form_mes {
+        font-size: 25px;
+        margin-top: 25px;
+    }
+
+    .answers_block {
+        display: block;
+        width: 80%;
+    }
+
+    .answer_each {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .span_wrapper {
+        width: 40px;
+        height: 40px;
+    }
+
+    .custom-radio-btn {
+        width: 30px;
+        height: 30px;
+    }
+
+    .custom-radio-btn::before {
+        left: 15px;
+        top: 15px;
+        width: 24px;
+        height: 24px;
+    }
+
+    .answer_each p {
+        line-height: 40px;
+        font-size: 25px;
+    }
+
+    .test_header {
+        margin-top: 0;
+    }
+
+    .test_header h3 {
+        font-size: 27px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        line-height: 30px;
+    }
+
+    .test_list a {
+        width: 90%;
+        font-size: 25px;
+    }
+
+    .test_header.result h3:first-child {
+        padding-bottom: 5px;
+    }
+
+    .test_header.result h3:nth-child(2) {
+        padding-top: 5px;
+    }
+
+    .result_table {
+        overflow-x: auto;
+    }
+
+    .result_table .row {
+        width: fit-content;
+    }
+
+    .result_table .row .each_td {
+        width: 250px;
+    }
+
+    .test_header.result {
+        padding-bottom: 10px;
+    }
+
+    .cabinet .row.search_row .input_wrapper {
+        width: 78%;
+    } 
+
+    .cabinet .row.search_row .btns {
+        width: 20%;
+        margin-left: 2%;
+    }
+
+    .cabinet .row {
+        margin-top: 25px;
+    }
+
+    .logo_wrapper .logout {
+        width: 60%;
+    }
+
+    .row.main.send_res {
+        width: 100%;
+    }
+
+    .test_header.employer .back_btn {
+        width: 70%;
+        margin-left: 15%;
+        margin-bottom: 10px;
+    }
+
+    .all_admins_table {
+        width: 100%;
+    }
+
+    .admin_form {
+        width: 100%;
+    }
+
+    .test_header.employer.admin_header.all_admins .back_btn {
+        width: 70%;
+        margin-left: 15%;
+        margin-bottom: 10px;
+    }
 }
