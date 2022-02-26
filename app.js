@@ -88,6 +88,13 @@ app.get("/mid_result", (req, res) => {
     })
 })
 
+app.get("/bad_mid_result", (req, res) => {
+    res.render("bad_mid_result.hbs", {
+        layout: "/layouts/test_layout",
+        result_page: true 
+    })
+})
+
 app.get("/result", (req, res) => {
     res.render("result.hbs", {
         layout: "/layouts/test_layout",
