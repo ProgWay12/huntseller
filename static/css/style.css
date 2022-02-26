@@ -165,6 +165,8 @@ input {
 .input:disabled {
     background-color: #fff;
     color: black;
+    -webkit-text-fill-color: #880000;
+    opacity: 1;   
 }
 
 input::placeholder {
