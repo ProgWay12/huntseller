@@ -1,7 +1,15 @@
 <div class="mid_result">
     <div class="test_header">
-        <h3>По итогам этого блока теста вы набрали <span>27 баллов</span></h3>
+        {{#if is_ambiverts}}
+            <h3>Вы <span>{{sum}}</span></h3>
+        {{else}}
+            {{#if is_without_res}}
+                <h3>Вы <span>{{sum}}прошли</span> этот блок теста!</h3>
+            {{else}}
+                <h3>По итогам этого блока теста вы набрали <span>{{sum}} баллов</span></h3>
+            {{/if}}
+        {{/if}}
     </div>
-    <a href="">Продолжить тестирование сейчас</a>
-    <a href="">Продолжить тестирование позже</a>
+    <a href="/test_page">Продолжить тестирование сейчас</a>
+    <a href="/logout/user">Продолжить тестирование позже</a>
 </div>

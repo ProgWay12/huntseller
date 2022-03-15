@@ -1,6 +1,5 @@
 <div class="test_header result">
-    <h3>Поздравляем, <span>Имя Человека!</span></h3>
-    <h3>По итогам теста вы набрали <span>270 баллов</span>  из 300</h3>
+    <h3>Поздравляем, <span>{{user_name}}!</span> <br> По итогам тестирования вам присвоена <span>{{category}} категория</span></h3>
 </div>
 <div class="result_table">
     <div class="row main">
@@ -16,103 +15,52 @@
     </div>
     <div class="row">
         <div class="each_td">
-            <div class="each_td_container">
-                <p>Стоп фактор</p>
+            <div class="each_td_container" {{#if stop_factor_1.is_red}} style="background-color: red;" {{else}}{{#if stop_factor_1.is_yellow}} style="background-color: orange;" {{else}} style="background-color: green;" {{/if}}{{/if}}>
+                <p>{{stop_factor_1.text}}</p>
             </div>
         </div>
         <div class="each_td">
-            <div class="each_td_container">
-                <p>Метапрофиль</p>
+            <div class="each_td_container" {{#if metaprofiles_1.is_red}} style="background-color: red;" {{else}}{{#if metaprofiles_1.is_yellow}} style="background-color: orange;" {{else}} style="background-color: green;" {{/if}}{{/if}}>
+                <p>{{metaprofiles_1.text}}</p>
             </div>
         </div>
         <div class="each_td">
-            <div class="each_td_container">
-                <p>Предназначение</p>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="each_td">
-            <div class="each_td_container">
-                <p>Стоп фактор</p>
-            </div>
-        </div>
-        <div class="each_td">
-            <div class="each_td_container">
-                <p>Метапрофиль</p>
-            </div>
-        </div>
-        <div class="each_td">
-            <div class="each_td_container">
-                <p>Предназначение</p>
+            <div class="each_td_container" {{#if third_1.is_red}} style="background-color: red;" {{else}}{{#if third_1.is_yellow}} style="background-color: orange;" {{else}} style="background-color: green;" {{/if}}{{/if}}>
+                <p>{{third_1.text}}</p>
             </div>
         </div>
     </div>
     <div class="row">
         <div class="each_td">
-            <div class="each_td_container">
-                <p>Стоп фактор</p>
+            <div class="each_td_container" {{#if stop_factor_1.is_red}} style="background-color: red;" {{else}}{{#if stop_factor_1.is_yellow}} style="background-color: orange;" {{else}} style="background-color: green;" {{/if}}{{/if}}>
+                <p>{{stop_factor_2.text}}</p>
             </div>
         </div>
         <div class="each_td">
-            <div class="each_td_container">
-                <p>Метапрофиль</p>
+            <div class="each_td_container" {{#if metaprofiles_2.is_red}} style="background-color: red;" {{else}}{{#if metaprofiles_2.is_yellow}} style="background-color: orange;" {{else}} style="background-color: green;" {{/if}}{{/if}}>
+                <p>{{metaprofiles_2.text}}</p>
             </div>
         </div>
         <div class="each_td">
-            <div class="each_td_container">
-                <p>Предназначение</p>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="each_td">
-            <div class="each_td_container">
-                <p>Стоп фактор</p>
-            </div>
-        </div>
-        <div class="each_td">
-            <div class="each_td_container">
-                <p>Метапрофиль</p>
-            </div>
-        </div>
-        <div class="each_td">
-            <div class="each_td_container">
-                <p>Предназначение</p>
+            <div class="each_td_container" {{#if third_2.is_red}} style="background-color: red;" {{else}}{{#if third_2.is_yellow}} style="background-color: orange;" {{else}} style="background-color: green;" {{/if}}{{/if}}>
+                <p>{{third_2.text}}</p>
             </div>
         </div>
     </div>
     <div class="row">
         <div class="each_td">
-            <div class="each_td_container">
-                <p>Стоп фактор</p>
+            <div class="each_td_container" {{#if stop_factor_1.is_red}} style="background-color: red;" {{else}}{{#if stop_factor_1.is_yellow}} style="background-color: orange;" {{else}} style="background-color: green;" {{/if}}{{/if}}>
+                <p>{{stop_factor_3.text}}</p>
             </div>
         </div>
         <div class="each_td">
-            <div class="each_td_container">
-                <p>Метапрофиль</p>
+            <div class="each_td_container" {{#if metaprofiles_3.is_red}} style="background-color: red;" {{else}}{{#if metaprofiles_3.is_yellow}} style="background-color: orange;" {{else}} style="background-color: green;" {{/if}}{{/if}}>
+                <p>{{metaprofiles_3.text}}</p>
             </div>
         </div>
         <div class="each_td">
-            <div class="each_td_container">
-                <p>Предназначение</p>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="each_td">
-            <div class="each_td_container">
-                <p>Стоп фактор</p>
-            </div>
-        </div>
-        <div class="each_td">
-            <div class="each_td_container">
-                <p>Метапрофиль</p>
-            </div>
-        </div>
-        <div class="each_td">
-            <div class="each_td_container">
-                <p>Предназначение</p>
+            <div class="each_td_container" {{#if third_3.is_red}} style="background-color: red;" {{else}}{{#if third_3.is_yellow}} style="background-color: orange;" {{else}} style="background-color: green;" {{/if}}{{/if}}>
+                <p>{{third_3.text}}</p>
             </div>
         </div>
     </div>
@@ -120,10 +68,13 @@
         <div class="each_td">
         </div>
         <div class="each_td">
+            <div class="each_td_container" {{#if metaprofiles_4.is_red}} style="background-color: red;" {{else}}{{#if metaprofiles_4.is_yellow}} style="background-color: orange;" {{else}} style="background-color: green;" {{/if}}{{/if}}>
+                <p>{{metaprofiles_4.text}}</p>
+            </div>
         </div>
         <div class="each_td">
-            <div class="each_td_container">
-                <p>Предназначение</p>
+            <div class="each_td_container" {{#if third_4.is_red}} style="background-color: red;" {{else}}{{#if third_4.is_yellow}} style="background-color: orange;" {{else}} style="background-color: green;" {{/if}}{{/if}}>
+                <p>{{third_4.text}}</p>
             </div>
         </div>
     </div>
@@ -131,21 +82,13 @@
         <div class="each_td">
         </div>
         <div class="each_td">
-        </div>
-        <div class="each_td">
-            <div class="each_td_container">
-                <p>Предназначение</p>
+            <div class="each_td_container" {{#if metaprofiles_5.is_red}} style="background-color: red;" {{else}}{{#if metaprofiles_5.is_yellow}} style="background-color: orange;" {{else}} style="background-color: green;" {{/if}}{{/if}}>
+                <p>{{metaprofiles_5.text}}</p>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="each_td">
-        </div>
-        <div class="each_td">
-        </div>
-        <div class="each_td">
-            <div class="each_td_container">
-                <p>Предназначение</p>
+            <div class="each_td_container" {{#if third_5.is_red}} style="background-color: red;" {{else}}{{#if third_5.is_yellow}} style="background-color: orange;" {{else}} style="background-color: green;" {{/if}}{{/if}}>
+                <p>{{third_5.text}}</p>
             </div>
         </div>
     </div>

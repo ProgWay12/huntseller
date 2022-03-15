@@ -1,72 +1,49 @@
+<div class="row search_row copy_codebtn">
+    <div class="btns">
+        <a class="each_btn search" onclick="copyToClipboard('{{employer_code}}')">
+            Скопировать код для опроса соикателя
+        </a>
+    </div>
+</div>
 <div class="row search_row">
     <div class="input_wrapper">
-        <input type="text" placeholder="Поиск по имени">
+        <input type="text" placeholder="Поиск по имени" id="search_field" value="{{user_param}}">
     </div>
     <div class="btns">
-        <a href="" class="each_btn search">
+        <a class="each_btn search" onclick="search_user()">
             <img src="/static/img/search.png" alt="">
         </a>
     </div>
 </div>
-<div class="row">
-    <div class="input_wrapper">
-        <input type="text" placeholder="Поиск по имени" disabled>
-    </div>
-    <div class="btns">
-        <div class="each_btn">
-            <p>70</p>
+{{#each users}}
+    <div class="row">
+        <div class="input_wrapper">
+            <input type="text" placeholder="Поиск по имени" value="{{this.user_name}}" disabled>
         </div>
-        <a href="" class="each_btn">
-            <img src="/static/img/arrow.png" alt="">
-        </a>
+        {{#if this.ended}}
+            {{#if is_good}}
+                <div class="btns">
+                    <div class="each_btn">
+                        <p>{{this.category}} кат.</p>
+                    </div>
+                    <a href="/employer_cabinet_result/{{this.id}}" class="each_btn">
+                        <img src="/static/img/arrow.png" alt="">
+                    </a>
+                </div>
+            {{else}}
+                <div class="btns">
+                    <div class="each_btn bad_result">
+                        <p>Недостаточно баллов</p>
+                    </div>
+                </div>
+            {{/if}}
+        {{else}}
+            <div class="btns">
+                <div class="each_btn process">
+                    <p>В процессе...</p>
+                </div>
+            </div>
+        {{/if}}
+        
     </div>
-</div>
-<div class="row">
-    <div class="input_wrapper">
-        <input type="text" placeholder="Поиск по имени" disabled>
-    </div>
-    <div class="btns">
-        <div class="each_btn">
-            <p>70</p>
-        </div>
-        <a href="" class="each_btn">
-            <img src="/static/img/arrow.png" alt="">
-        </a>
-    </div>
-</div>
-<div class="row">
-    <div class="input_wrapper">
-        <input type="text" placeholder="Поиск по имени" disabled>
-    </div>
-    <div class="btns">
-        <div class="each_btn">
-            <p>70</p>
-        </div>
-        <a href="" class="each_btn">
-            <img src="/static/img/arrow.png" alt="">
-        </a>
-    </div>
-</div>
-<div class="row">
-    <div class="input_wrapper">
-        <input type="text" placeholder="Поиск по имени" disabled>
-    </div>
-    <div class="btns">
-        <div class="each_btn">
-            <p>70</p>
-        </div>
-        <a href="" class="each_btn">
-            <img src="/static/img/arrow.png" alt="">
-        </a>
-    </div>
-</div>
-<div class="row">
-    <div class="input_wrapper">
-        <input type="text" placeholder="Поиск по имени" disabled>
-    </div>
-    <div class="btns">
-        <div class="each_btn bad_result">
-            <p>Недостаточно баллов</p>
-        </div>
-    </div>
-</div>
+{{/each}}

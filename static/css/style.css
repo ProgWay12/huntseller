@@ -49,6 +49,10 @@ body {
     background: #0D4685;
 }
 
+a:hover {
+    cursor: pointer;
+}
+
 .main_page {
     width: 50%;
     margin: 0 auto;
@@ -210,7 +214,7 @@ input[type='submit'] {
     font-size: 30px;    
     padding-top: 22.5px;
     padding-bottom: 22.5px;
-    line-height: 35px;
+    line-height: 45px;
     color: black;
     text-align: center;
 }
@@ -284,6 +288,7 @@ input[type='submit'] {
 }
 
 .answer_each p {
+    width: calc(100% - 100px);
     font-family: "PlumbCondensed_regular";
     font-size: 27px;
     line-height: 50px;
@@ -350,7 +355,7 @@ input[type='submit'] {
 }
 
 .test_header.result h3{
-    line-height: 33px;
+    line-height: 45px;
 }
 
 .result_table {
@@ -390,14 +395,19 @@ input[type='submit'] {
 .row .each_td .each_td_container p {
     font-family: "PlumbCondensed_regular";
     color: black;
-    font-size: 27px;
+    font-size: 23px;
     line-height: 60px;
     text-align: center;
-    width: 100%;
+    width: 95%;
+    padding-left: 2.5%;
 }
 
 .row.main .each_td {
     height: 70px;
+}
+
+.result_table .row .each_td p {
+    color: white;
 }
 
 .row.main .each_td p {
@@ -475,7 +485,10 @@ input[type='submit'] {
     background: linear-gradient(90.47deg, #E76666 10.82%, #E44040 44.6%);
 }
 
-
+.cabinet .row .btns .each_btn.process {
+    width: 100%;
+    margin: 0!important;
+}
 
 .cabinet .row .btns .each_btn:nth-child(1) {
     margin-right: 4%;
@@ -639,7 +652,21 @@ input[type='submit'] {
     margin: 0;
 }
 
+.cabinet .row.copy_codebtn .btns {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.cabinet .row.copy_codebtn .btns a {
+    line-height: 66px;
+}
+
+.cabinet .row.copy_codebtn .btns a:hover {
+    cursor: pointer;
+}
+
 @media screen and (max-width: 800px) {
+
     .main_page {
         min-width: auto;
         width: 90%;
@@ -783,6 +810,16 @@ input[type='submit'] {
     .all_admins_table_row a.each_btn:first-child {
         margin-left: 0;
     }
+
+    .cabinet .row.copy_codebtn .btns {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .cabinet .row.copy_codebtn .btns a {
+        line-height: 66px;
+        font-size: 30px;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -922,5 +959,15 @@ input[type='submit'] {
         width: 70%;
         margin-left: 15%;
         margin-bottom: 10px;
+    }
+    
+    .cabinet .row.copy_codebtn .btns {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .cabinet .row.copy_codebtn .btns a {
+        line-height: 66px;
+        font-size: 22px;
     }
 }

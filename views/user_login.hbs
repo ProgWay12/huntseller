@@ -1,10 +1,10 @@
-<form action="">
+<form action="user_login" method="post">
     <div class="input_wrapper">
-        <input type="tel" placeholder="Номер телефона">
+        <input type="tel" placeholder="Номер телефона" name="phone_number" required>
     </div>
     <div class="input_wrapper">
-        <input type="tel" placeholder="Код работодателя">
+        <input type="tel" placeholder="Код работодателя" name="employer_code" required>
     </div>
     <input type="submit" value="Войти">
-    <a href="" class="under_form_mes">У меня нет аккаунта</a>
+    <a href="/user_register" class="under_form_mes">У меня нет аккаунта</a>
 </form>

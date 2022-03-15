@@ -1,0 +1,34 @@
+<div class="test_header">
+    <h3>{{ask_main_text}} <br> {{ask_info.ask_text}}</h3>
+</div>
+<div class="answers_block">
+    <div class="answer_each" onclick="check_radio(this)">
+        <input type="radio" name="answer" id="" class="real-radio-btn" value="non_anxiety">
+        <div class="span_wrapper">
+            <span class="custom-radio-btn"></span>
+        </div>
+        <p>Тревоги нет</p>
+    </div>
+    <div class="answer_each" onclick="check_radio(this)">
+        <input type="radio" name="answer" id="" class="real-radio-btn" value="slight_anxiety">
+        <div class="span_wrapper">
+            <span class="custom-radio-btn"></span>
+        </div>
+        <p>Легкая тревога</p>
+    </div>
+    <div class="answer_each" onclick="check_radio(this)">
+        <input type="radio" name="answer" id="" class="real-radio-btn" value="medium_anxiety">
+        <div class="span_wrapper">
+            <span class="custom-radio-btn"></span>
+        </div>
+        <p>Умеренная тревога</p>
+    </div>
+    <div class="answer_each" onclick="check_radio(this)">
+        <input type="radio" name="answer" id="" class="real-radio-btn" value="high_anxiety">
+        <div class="span_wrapper">
+            <span class="custom-radio-btn"></span>
+        </div>
+        <p>Интенсивная тревога</p>
+    </div>
+</div>
+<a onclick="accept_ask({{ask_info.ask_id}}, {{ask_info.block_id}})">Далее</a>

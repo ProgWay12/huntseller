@@ -1,56 +1,26 @@
 <div class="test_header employer admin_header all_admins">
-    <a class="back_btn">
+    <a href="/admin" class="back_btn">
         <img src="/static/img/arrow_back.png" alt="">
     </a>
     <h3>Все заявки</h3>
 </div>
 <div class="all_admins_table">
-    <div class="all_admins_table_row">
-        <div class="input_wrapper">
-            <input type="text" placeholder="Имя работодателя"  disabled>
+    {{#each employers}}
+        <div class="all_admins_table_row">
+            <div class="input_wrapper">
+                <input type="text" placeholder="Имя работодателя" value="{{this.user_name}}" disabled>
+            </div>
+            <div class="input_wrapper">
+                <input type="text" placeholder="Почта работодателя" value="{{this.email}}" disabled>
+            </div>
+            <div class="btns">
+                <a href="/unapply_employer/{{this.id}}" class="each_btn">
+                    <img src="/static/img/delete.png" alt="">
+                </a>
+                <a href="/apply_employer/{{this.id}}" class="each_btn">
+                    <img src="/static/img/apply.png" alt="">
+                </a>
+            </div>
         </div>
-        <div class="input_wrapper">
-            <input type="text" placeholder="Почта работодателя"  disabled>
-        </div>
-        <div class="btns">
-            <a class="each_btn">
-                <img src="/static/img/delete.png" alt="">
-            </a>
-            <a href="" class="each_btn">
-                <img src="/static/img/apply.png" alt="">
-            </a>
-        </div>
-    </div> 
-    <div class="all_admins_table_row">
-        <div class="input_wrapper">
-            <input type="text" placeholder="Имя работодателя"  disabled>
-        </div>
-        <div class="input_wrapper">
-            <input type="text" placeholder="Почта работодателя"  disabled>
-        </div>
-        <div class="btns">
-            <a class="each_btn">
-                <img src="/static/img/delete.png" alt="">
-            </a>
-            <a href="" class="each_btn">
-                <img src="/static/img/apply.png" alt="">
-            </a>
-        </div>
-    </div> 
-    <div class="all_admins_table_row">
-        <div class="input_wrapper">
-            <input type="text" placeholder="Имя работодателя"  disabled>
-        </div>
-        <div class="input_wrapper">
-            <input type="text" placeholder="Почта работодателя"  disabled>
-        </div>
-        <div class="btns">
-            <a class="each_btn">
-                <img src="/static/img/delete.png" alt="">
-            </a>
-            <a href="" class="each_btn">
-                <img src="/static/img/apply.png" alt="">
-            </a>
-        </div>
-    </div> 
+    {{/each}}
 </div>

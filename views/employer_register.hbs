@@ -1,13 +1,13 @@
-<form action="">
+<form action="/employer_register" method="post">
     <div class="input_wrapper">
-        <input type="text" placeholder="Имя">
+        <input type="text" name="user_name" placeholder="Имя" required>
     </div>
     <div class="input_wrapper">
-        <input type="email" placeholder="Почта">
+        <input type="email" name="email" placeholder="Почта" required>
     </div>
     <div class="input_wrapper">
-        <input type="password" placeholder="Пароль">
+        <input type="password" name="pass" placeholder="Пароль" required>
     </div>
     <input type="submit" value="Зарегистрироваться">
-    <a href="" class="under_form_mes">У меня уже есть аккаунт</a>
+    <a href="/employer_login" class="under_form_mes">У меня уже есть аккаунт</a>
 </form>

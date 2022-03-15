@@ -1,10 +1,10 @@
-<form action="">
+<form action="/employer_login" method="post">
     <div class="input_wrapper">
-        <input type="email" placeholder="Почта">
+        <input type="email" name="email" placeholder="Почта" required>
     </div>
     <div class="input_wrapper">
-        <input type="password" placeholder="Пароль">
+        <input type="password" name="pass" placeholder="Пароль" required>
     </div>
     <input type="submit" value="Войти">
-    <a href="" class="under_form_mes">У меня нет аккаунта</a>
+    <a href="/employer_register" class="under_form_mes">У меня нет аккаунта</a>
 </form>

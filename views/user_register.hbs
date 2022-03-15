@@ -1,13 +1,13 @@
-<form action="">
+<form action="/user_register" method="post">
     <div class="input_wrapper">
-        <input type="text" placeholder="Имя">
+        <input type="text" placeholder="Имя" name="user_name" required>
     </div>
     <div class="input_wrapper">
-        <input type="tel" placeholder="Номер телефона">
+        <input type="tel" placeholder="Номер телефона" name="phone_number" required>
     </div>
     <div class="input_wrapper">
-        <input type="tel" placeholder="Код работодателя">
+        <input type="tel" placeholder="Код работодателя" name="employer_code" required>
     </div>
     <input type="submit" value="Зарегистрироваться">
-    <a href="" class="under_form_mes">У меня уже есть аккаунт</a>
+    <a href="/user_login" class="under_form_mes">У меня уже есть аккаунт</a>
 </form>

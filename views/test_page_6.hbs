@@ -1,0 +1,20 @@
+<div class="test_header">
+    <h3>{{ask_main_text}} <br> {{ask_info.ask_text}}</h3>
+</div>
+<div class="answers_block">
+    <div class="answer_each" onclick="check_radio(this)">
+        <input type="radio" name="answer" id="" class="real-radio-btn" value="yes">
+        <div class="span_wrapper">
+            <span class="custom-radio-btn"></span>
+        </div>
+        <p>Да</p>
+    </div>
+    <div class="answer_each" onclick="check_radio(this)">
+        <input type="radio" name="answer" id="" class="real-radio-btn" value="no">
+        <div class="span_wrapper">
+            <span class="custom-radio-btn"></span>
+        </div>
+        <p>Нет</p>
+    </div>
+</div>
+<a onclick="accept_ask({{ask_info.ask_id}}, {{ask_info.block_id}})">Далее</a>

@@ -1,15 +1,15 @@
 <div class="test_header employer admin_header">
-    <a class="back_btn">
+    <a href="/admin" class="back_btn">
         <img src="/static/img/arrow_back.png" alt="">
     </a>
     <h3>Добавить админа</h3>
 </div>
-<form action="" class="admin_form">
+<form action="/add_admin" method="post" class="admin_form">
     <div class="input_wrapper">
-        <input type="text" placeholder="Логин">
+        <input type="text" placeholder="Логин" name="login" required>
     </div>
     <div class="input_wrapper">
-        <input type="password" placeholder="Пароль">
+        <input type="password" placeholder="Пароль" name="pass" required>
     </div>
     <input type="submit" value="Добавить">
 </form>
@@ -17,52 +17,22 @@
     <h3>Выслать результаты на почту</h3>
 </div>
 <div class="all_admins_table">
-    <div class="all_admins_table_row">
-        <div class="input_wrapper">
-            <input type="text" placeholder="Логин админа">
-        </div>
-        <div class="input_wrapper">
-            <input type="text" placeholder="Пароль админа">
-        </div>
-        <div class="btns">
-            <div class="each_btn">
-                <p>Ред.</p>
+    {{#each admins}}
+        <div class="all_admins_table_row">
+            <div class="input_wrapper">
+                <input type="text" placeholder="Логин админа" name="login" value="{{this.login}}">
             </div>
-            <a href="" class="each_btn">
-                <img src="/static/img/delete.png" alt="">
-            </a>
-        </div>
-    </div>
-    <div class="all_admins_table_row">
-        <div class="input_wrapper">
-            <input type="text" placeholder="Логин админа">
-        </div>
-        <div class="input_wrapper">
-            <input type="text" placeholder="Пароль админа">
-        </div>
-        <div class="btns">
-            <div class="each_btn">
-                <p>Ред.</p>
+            <div class="input_wrapper">
+                <input type="text" placeholder="Пароль админа" name="pass" value="{{this.pass}}">
             </div>
-            <a href="" class="each_btn">
-                <img src="/static/img/delete.png" alt="">
-            </a>
-        </div>
-    </div>
-    <div class="all_admins_table_row">
-        <div class="input_wrapper">
-            <input type="text" placeholder="Логин админа">
-        </div>
-        <div class="input_wrapper">
-            <input type="text" placeholder="Пароль админа">
-        </div>
-        <div class="btns">
-            <div class="each_btn">
-                <p>Ред.</p>
+            <div class="btns">
+                <div class="each_btn" onclick="edit_admin_info({{this.id}}, this)">
+                    <p>Ред.</p>
+                </div>
+                <a href="/delete_admin/{{this.id}}" class="each_btn">
+                    <img src="/static/img/delete.png" alt="">
+                </a>
             </div>
-            <a href="" class="each_btn">
-                <img src="/static/img/delete.png" alt="">
-            </a>
         </div>
-    </div>  
+    {{/each}} 
 </div>
