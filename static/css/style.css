@@ -195,7 +195,8 @@ input[type='submit'] {
 }
 
 .test_list {
-    width: 100%;
+    width: 120%;
+    margin-left: -10%;
     border-radius: 50px;
     background: #fff;
     display: block;    
@@ -665,7 +666,32 @@ input[type='submit'] {
     cursor: pointer;
 }
 
+.block_v {
+    display: block;
+}
+
+.block_v .answer_each {
+    width: 80%;
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width: 1000px) {
+    .test_list {
+        width: 100%;
+        margin-left: 0%;
+    }
+
+    .row .each_td .each_td_container p {
+        font-size: 19px;
+    }
+}
+
 @media screen and (max-width: 800px) {
+
+    .test_list {
+        width: 100%;
+        margin-left: 0;
+    }
 
     .main_page {
         min-width: auto;
@@ -823,6 +849,11 @@ input[type='submit'] {
 }
 
 @media screen and (max-width: 500px) {
+    .block_v .answer_each {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
     .logo {
         width: 80%;
     }

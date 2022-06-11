@@ -1,0 +1,4 @@
+PassengerNodejs /home/s/samoil7h/.local/bin/node
+PassengerAppRoot /home/s/samoil7h/huntseller.ru/huntseller
+PassengerAppType node
+PassengerStartupFile app.js

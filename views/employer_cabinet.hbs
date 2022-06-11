@@ -1,6 +1,6 @@
 <div class="row search_row copy_codebtn">
     <div class="btns">
-        <a class="each_btn search" onclick="copyToClipboard('{{employer_code}}')">
+        <a class="each_btn search" onclick="copyToClipboard('{{employer_code}}', this)">
             Скопировать код для опроса соикателя
         </a>
     </div>
@@ -23,7 +23,7 @@
         {{#if this.ended}}
             {{#if is_good}}
                 <div class="btns">
-                    <div class="each_btn">
+                    <div class="each_btn" {{#if is_best}}style="background: #5CAE95;"{{/if}}>
                         <p>{{this.category}} кат.</p>
                     </div>
                     <a href="/employer_cabinet_result/{{this.id}}" class="each_btn">

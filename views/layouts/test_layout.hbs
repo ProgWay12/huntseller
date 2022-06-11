@@ -20,12 +20,18 @@
     {{/if}}
     
     
-    <main {{#if result_page}}class="test_page"{{else}}class="test_page progressbar_margin"{{/if}} >
+    <main {{#if result_page}}class="test_page"{{else}}class="test_page progressbar_margin"{{/if}}>
         <div class="logo">
             <img src="/static/img/logo.png" alt="">
         </div>
-        <div class="test_list" {{#if admin_page}}style="background: none;"{{/if}}>
+        <div class="test_list" {{#if admin_page}}style="background: none;"{{/if}} {{#if first_ask}}style="display: none;"{{/if}} id="ask">
             {{{body}}}
+        </div>
+        <div class="test_list" {{#if first_ask}}style="display: block;"{{else}}style="display: none;"{{/if}} id="instraction">
+            <div class="test_header">
+                <h3>{{ask_main_text}}</h3>
+            </div> 
+            <a onclick="show_ask()">Далее</a>
         </div>
     </main>
     <script src="/static/js/main.js"></script>

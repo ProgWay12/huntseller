@@ -22,13 +22,21 @@ window.onload = () => {
     }
 }
 
-function copyToClipboard(code) {
+function copyToClipboard(code, btn) {
     var copytext = document.createElement('input')
     copytext.value = code
     document.body.appendChild(copytext)
     copytext.select()
     document.execCommand('copy')
     document.body.removeChild(copytext)
+
+    btn.style.background = "#5CAE95"
+    btn.innerText = "Успешно скопировано"
+
+    setTimeout(() => {
+        btn.style.background = "linear-gradient(90.47deg, #66E7C8 10.82%, #409FE4 44.6%)"
+        btn.innerText = "Скопировать код для опроса соикателя"
+    }, 1500)
 }
 
 function edit_admin_info(id, elem) {
@@ -75,4 +83,9 @@ function search_user() {
     } else {
         window.location.href = `/employer_cabinet`
     }
+}
+
+function show_ask() {
+    document.getElementById("instraction").style.display = "none"
+    document.getElementById("ask").style.display = "block"
 }
